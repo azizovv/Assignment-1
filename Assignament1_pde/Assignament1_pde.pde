@@ -23,4 +23,5 @@ void draw () {
   s.ellipse_draw();
   s.looping();
   a.draw_rect();
+  a.draw_arct();
 }
