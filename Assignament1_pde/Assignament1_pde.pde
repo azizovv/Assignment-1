@@ -1,5 +1,6 @@
 Space_field s;
 Space_ship a;
+Planets p;
 
 void setup() {
 
@@ -9,6 +10,8 @@ void setup() {
   noCursor();
   s = new Space_field();
   a = new Space_ship();
+  p= new Planets ();
+  
 
   
  
