@@ -1,6 +1,8 @@
+
 Space_field s;
 Space_ship a;
 Planets p;
+Radar radar;
 
 void setup() {
  
@@ -12,7 +14,7 @@ void setup() {
   s = new Space_field();
   a = new Space_ship();
   p= new Planets ();
-  
+  radar = new Radar(width / 3, height / 2.5, 100, 1, color(0, 255, 0));
   
 
   
@@ -30,4 +32,6 @@ void draw () {
   a.draw_rect();
   a.draw_arct();
   p. plannets();
+  radar.update();
+  radar.render();
 }
