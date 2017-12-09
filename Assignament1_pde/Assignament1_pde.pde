@@ -14,7 +14,7 @@ void setup() {
   s = new Space_field();
   a = new Space_ship();
   p= new Planets ();
-  radar = new Radar(width / 3, height / 2.5, 100, 1, color(0, 255, 0));
+  radar = new Radar(width / 2.8, height / 2.5, 50, 1, color(255, 255, 0));
   
 
   
