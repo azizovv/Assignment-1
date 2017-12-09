@@ -3,6 +3,7 @@ Space_ship a;
 Planets p;
 
 void setup() {
+ 
 
   size (800, 600);
   background (0);
@@ -11,6 +12,7 @@ void setup() {
   s = new Space_field();
   a = new Space_ship();
   p= new Planets ();
+  
   
 
   
@@ -27,4 +29,5 @@ void draw () {
   s.looping();
   a.draw_rect();
   a.draw_arct();
+  p. plannets();
 }
