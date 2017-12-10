@@ -2,11 +2,12 @@
 Space_field s;
 Space_ship a;
 Planets p;
-Radar radar;
-Compass c;
+Radar radar; 
+ Compass c;
+
 
 void setup() {
- 
+
 
   size (800, 600);
   background (0);
@@ -17,9 +18,6 @@ void setup() {
   p= new Planets ();
   radar = new Radar(width / 2.8, height / 2.5, 50, 1, color(255, 255, 0));
   c = new Compass();
-
-  
- 
 }
 
 

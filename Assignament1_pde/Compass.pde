@@ -1,35 +1,33 @@
 class Compass {
-  PFont myFont;
-  
-  void draw_comp(){
-//stroke(random(255), random(255), random(255), 255);
-//strokeWeight(10);
-//triangle(width/2,height/2,mouseX,height/2, width/2, mouseY);
+PFont myFont;
 
-arrow(width/8, height/8, mouseX, mouseY, color(200,0,200));
-arrow(width/8, height/8, width/8, 50, color(0,200,200));
-//arrow(mouseX, mouseY, width/2, 50, color(200,200,0));
+
+void draw_comp(){
+
+arrow(width/20, height/20, mouseX, mouseY, color(200,0,200));
+arrow(width/20, height/20, width/20, 50, color(0,200,200));
+
 
 textAlign(CENTER);
 fill(0, 102, 153);
-text("North", width/2, 25); 
-PVector v1 = new PVector(0, width/2-50);
-PVector v2 = new PVector((width/2)-mouseX, (height/2)-mouseY); 
+text("North", width/4, 0.5); 
+PVector v1 = new PVector(20, width/8-50);
+PVector v2 = new PVector((width/8)-mouseX, (height/8)-mouseY); 
 float a = PVector.angleBetween(v1, v2);
-if (mouseX < width/2)
-text(-degrees(a)+360 + " degrees", width/2, height/4*3); 
+if (mouseX < width/8)
+text(-degrees(a)+360 + " degrees", width/8, height/4*3); 
 else
-text(degrees(a) + " degrees", width/2, height/4*3);  // Prints "10.304827");
-text("(Clockwise from North)", width/2, height*.85);
+text(degrees(a) + " degrees", width/8, height/4*3);  // Prints "10.304827");
+text("(Clockwise from North)", width/8, height*.9);
 fill(200, 0, 200);
-text("Your direction", mouseX-50, mouseY+50);  // Prints "10.304827");
+text("Your direction", mouseX-100, mouseY+100);  // Prints "10.304827");
 
 }
 
 void arrow(int x1, int y1, int x2, int y2, color c) {
   smooth();
   stroke (c);
-  strokeWeight(3);
+  strokeWeight(1);
   line(x1, y1, x2, y2);
   pushMatrix();
   translate(x2, y2);
@@ -50,4 +48,4 @@ void arrow(int x1, int y1, int x2, int y2) {
   line(0, 0, 10, -10);
   popMatrix();
 }
-} 
+}
