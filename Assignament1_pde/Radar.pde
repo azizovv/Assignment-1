@@ -33,8 +33,8 @@ class Radar
     for(int i = 0 ; i < trailLength ; i ++)
     {
       stroke(0, i * greenIntensity, 0);
-      float x = cx + sin(theta + i * speed) * radius;
-      float y = cy -cos(theta + i * speed) * radius;
+      float x = cx + sin(theta + i * speed) * radius /1.5;
+      float y = cy -cos(theta + i * speed) * radius /1.5;
       line(cx, cy, x, y);
     }
   }

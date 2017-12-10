@@ -4,6 +4,7 @@ Space_ship a;
 Planets p;
 Radar radar; 
  Compass c;
+ //Button b;
 
 
 void setup() {
@@ -18,6 +19,8 @@ void setup() {
   p= new Planets ();
   radar = new Radar(width / 2.8, height / 2.5, 50, 1, color(255, 255, 0));
   c = new Compass();
+ // b = new Button();
+  
 }
 
 
