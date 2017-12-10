@@ -3,6 +3,7 @@ Space_field s;
 Space_ship a;
 Planets p;
 Radar radar;
+Compass c;
 
 void setup() {
  
@@ -15,7 +16,7 @@ void setup() {
   a = new Space_ship();
   p= new Planets ();
   radar = new Radar(width / 2.8, height / 2.5, 50, 1, color(255, 255, 0));
-  
+  c = new Compass();
 
   
  
@@ -34,4 +35,6 @@ void draw () {
   p. plannets();
   radar.update();
   radar.render();
+  c.draw_comp();
+  
 }
