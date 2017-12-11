@@ -25,7 +25,7 @@ class Radar
   
   void render()
   {
-    stroke(51,51 , 255);
+    stroke(255,255 , 204);
     fill(0);
     ellipse(cx, cy, radius * 1.5, radius * 1.5);
     int trailLength = 10;

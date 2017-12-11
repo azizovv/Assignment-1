@@ -3,8 +3,8 @@ Space_field s;
 Space_ship a;
 Planets p;
 Radar radar; 
- Compass c;
- //Button b;
+//Data d;
+Clock c;
 
 
 void setup() {
@@ -18,10 +18,12 @@ void setup() {
   a = new Space_ship();
   p= new Planets ();
   radar = new Radar(width / 2.8, height / 2.5, 50, 1, color(255, 255, 0));
-  c = new Compass();
- // b = new Button();
-  
+  //d = new Data();
+  c= new Clock();
+ 
+ 
 }
+
 
 
 void draw () {
@@ -36,6 +38,7 @@ void draw () {
   p. plannets();
   radar.update();
   radar.render();
-  c.draw_comp();
-  
+  //d.draw_data();
+  c.draw_clock();
+  c.draw_clock1();
 }
