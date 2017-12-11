@@ -9,22 +9,22 @@ void draw_clock() {
  
 
   
-  int radius = min(width, height) / 8;
+  int radius = min(width, height) / 15;
   secondsRadius = radius * 0.72;
   minutesRadius = radius * 0.60;
   hoursRadius = radius * 0.50;
   clockDiameter = radius * 1.8;
   
-  cx = width / 20;
-  cy = height /20 ;
+  cx = width /2000;
+  cy = height /2.5 ;
 }
 
 void draw_clock1() {
   
   
   // Draw the clock background
-  fill(80);
-  stroke(20);
+  fill(0);
+  stroke(2);
   ellipse(cx, cy, clockDiameter, clockDiameter);
   
   // Angles for sin() and cos() start at 3 o'clock;
@@ -34,16 +34,16 @@ void draw_clock1() {
   float h = map(hour() + norm(minute(), 0, 60), 0, 24, 0, TWO_PI * 2) - HALF_PI;
   
   // Draw the hands of the clock
-  stroke(255);
+  stroke(255,0,0);
   strokeWeight(1);
   line(cx, cy, cx + cos(s) * secondsRadius, cy + sin(s) * secondsRadius);
-  strokeWeight(2);
+  strokeWeight(1);
   line(cx, cy, cx + cos(m) * minutesRadius, cy + sin(m) * minutesRadius);
-  strokeWeight(4);
+  strokeWeight(1);
   line(cx, cy, cx + cos(h) * hoursRadius, cy + sin(h) * hoursRadius);
   
   // Draw the minute ticks
-  strokeWeight(2);
+  strokeWeight(1);
   beginShape(POINTS);
   for (int a = 0; a < 360; a+=6) {
     float angle = radians(a);
