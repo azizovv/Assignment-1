@@ -1,4 +1,7 @@
 class Space_ship{
+ 
+  
+  
   
  void draw_rect() {
 

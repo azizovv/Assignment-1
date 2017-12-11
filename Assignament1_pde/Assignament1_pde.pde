@@ -1,10 +1,15 @@
+import ddf.minim.*;
 
+
+ 
 Space_field s;
 Space_ship a;
 Planets p;
 Radar radar; 
 //Data d;
 Clock c;
+Minim minim;
+AudioPlayer player;
 
 
 void setup() {
@@ -20,7 +25,10 @@ void setup() {
   radar = new Radar(width / 2.8, height / 2.5, 50, 1, color(255, 255, 0));
   //d = new Data();
   c= new Clock();
- 
+  minim = new Minim(this);
+    player =minim.loadFile("spaceship.mp3");
+     player.play();
+  
  
 }
 
