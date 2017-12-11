@@ -5,8 +5,8 @@ class Space_ship{
   
  void draw_rect() {
 
-  stroke(128,128,128);
-  fill(255);
+  stroke(0);
+  fill(128,128,128);
   rect(0, 500, 800, 100,15);
   //rect(0,0,10,900);
   //rect(790,0,10,600);
@@ -19,9 +19,11 @@ class Space_ship{
 void draw_arct() {
    translate(width/2, height/2);
   rotate(TWO_PI);
-  fill(255);
+  fill(128);
   arc(0, -450, 900, 500,0 , PI);
   
  
 }
+
+
 }

@@ -1,5 +1,6 @@
 class Clock {
-  float cx, cy;
+  float  cy;
+  int cx;
 float secondsRadius;
 float minutesRadius;
 float hoursRadius;
@@ -15,7 +16,7 @@ void draw_clock() {
   hoursRadius = radius * 0.50;
   clockDiameter = radius * 1.8;
   
-  cx = width /2000;
+  cx = width/30000;
   cy = height /2.5 ;
 }
 
